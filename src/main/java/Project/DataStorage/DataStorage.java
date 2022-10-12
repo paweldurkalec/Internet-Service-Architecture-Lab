@@ -8,6 +8,6 @@ import java.util.HashSet;
 
 @Component
 public class DataStorage {
-    HashSet<Worker> workers = new HashSet<>();
-    HashSet<Company> companies = new HashSet<>();
+    public HashSet<Worker> workers = new HashSet<>();
+    public HashSet<Company> companies = new HashSet<>();
 }

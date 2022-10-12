@@ -1,10 +1,17 @@
 package Project.Worker.Entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.ToString;
+
+@Builder
+@ToString
+@AllArgsConstructor
 public class Worker {
 
-    String name;
+    public String name;
 
-    int age;
+    public int age;
 
-    Company company;
+    public Company company;
 }

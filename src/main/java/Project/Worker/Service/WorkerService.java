@@ -8,7 +8,9 @@ import lombok.Builder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -19,12 +21,14 @@ public class WorkerService {
     @Autowired
     public WorkerService(WorkerRepository wr){this.repository = wr;}
 
-    public Optional<Worker> find(String name){return repository.find(name);}
+    public Optional<Worker> find(String name){return repository.findById(name);}
 
-    public HashSet<Worker> findAll(){return repository.findAll();}
+    public List<Worker> findAll(){return repository.findAll();}
 
-    public void create(Worker w){repository.create(w);}
+    @Transactional
+    public void create(Worker w){repository.save(w);}
 
+    @Transactional
     public void delete(Worker w){repository.delete(w);}
 
 }

@@ -1,6 +1,5 @@
 package Project.Worker.Repository;
 
-import Project.DataStorage.DataStorage;
 import Project.Repository.Repository;
 import Project.Worker.Entity.Company;
 import org.springframework.beans.factory.annotation.Autowired;

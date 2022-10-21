@@ -1,6 +1,8 @@
 package Project.Controller;
 
 
+import Project.Worker.Controller.CompanyController;
+import Project.Worker.Controller.WorkerController;
 import Project.Worker.Entity.Company;
 import Project.Worker.Entity.Worker;
 import Project.Worker.Service.CompanyService;
@@ -16,13 +18,13 @@ import java.io.InputStreamReader;
 @Component
 public class CommandLine implements CommandLineRunner {
 
-    private WorkerService workerService;
+    private WorkerController workerController;
 
-    private CompanyService companyService;
+    private CompanyController companyController;
     @Autowired
-    public CommandLine(WorkerService ws, CompanyService cs) {
-        this.workerService = ws;
-        this.companyService = cs;
+    public CommandLine(WorkerController wc, CompanyController cc) {
+        this.workerController = wc;
+        this.companyController = cc;
     }
 
     private void listCommands(){
@@ -54,28 +56,28 @@ public class CommandLine implements CommandLineRunner {
                 listCommands();
             }
             else if(words[0].equals("workers")){
-                workerService.findAll().forEach(element -> System.out.println(element.toString()));
+                workerController.findAll().forEach(element -> System.out.println(element.toString()));
             }
             else if(words[0].equals("companies")){
-                companyService.findAll().forEach(element -> System.out.println(element.toString()));
+                companyController.findAll().forEach(element -> System.out.println(element.toString()));
             }
             else if(words[0].equals("add")){
                 if(words[1].equals("company")){
-                    companyService.create(new Company(words[2],Integer.parseInt(words[3]),words[4]));
+                    companyController.create(new Company(words[2],Integer.parseInt(words[3]),words[4]));
                 }
                 else if(words[1].equals("worker")){
-                    workerService.create(new Worker(words[2],Integer.parseInt(words[3]),companyService.find(words[4]).get()));
+                    workerController.create(new Worker(words[2],Integer.parseInt(words[3]),companyController.find(words[4]).get()));
                 }
             }
             else if(words[0].equals("delete")){
                 if(words[1].equals("company")){
-                    if(companyService.find(words[2]).isPresent()) {
-                        companyService.delete(companyService.find(words[2]).get());
+                    if(companyController.find(words[2]).isPresent()) {
+                        companyController.delete(companyController.find(words[2]).get());
                     }
                 }
                 else if(words[1].equals("worker")){
-                    if(workerService.find(words[2]).isPresent()) {
-                        workerService.delete(workerService.find(words[2]).get());
+                    if(workerController.find(words[2]).isPresent()) {
+                        workerController.delete(workerController.find(words[2]).get());
                     }
                 }
             }

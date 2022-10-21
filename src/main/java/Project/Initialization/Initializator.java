@@ -1,5 +1,7 @@
 package Project.Initialization;
 
+import Project.Worker.Controller.CompanyController;
+import Project.Worker.Controller.WorkerController;
 import Project.Worker.Entity.Company;
 import Project.Worker.Entity.Worker;
 import Project.Worker.Service.CompanyService;
@@ -11,13 +13,13 @@ import javax.annotation.PostConstruct;
 
 @Component
 public class Initializator {
-    private WorkerService workerService;
-    private CompanyService companyService;
+    private final WorkerController workerController;
+    private final CompanyController companyController;
 
     @Autowired
-    public Initializator(CompanyService cs, WorkerService ws){
-        this.workerService = ws;
-        this.companyService = cs;
+    public Initializator(CompanyController cc, WorkerController wc){
+        this.workerController = wc;
+        this.companyController = cc;
     }
 
     @PostConstruct
@@ -58,12 +60,12 @@ public class Initializator {
                 .company(c2)
                 .build();
 
-        companyService.create(c1);
-        companyService.create(c2);
-        workerService.create(w1);
-        workerService.create(w2);
-        workerService.create(w3);
-        workerService.create(w4);
+        companyController.create(c1);
+        companyController.create(c2);
+        workerController.create(w1);
+        workerController.create(w2);
+        workerController.create(w3);
+        workerController.create(w4);
     }
 
 }

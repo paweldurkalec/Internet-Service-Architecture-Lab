@@ -21,7 +21,7 @@ import java.util.function.Function;
 @AllArgsConstructor
 @ToString
 @EqualsAndHashCode
-public class GetCompaniesResponse {
+public class GetWorkersResponse {
 
     @Getter
     @Setter
@@ -30,24 +30,24 @@ public class GetCompaniesResponse {
     @AllArgsConstructor(access = AccessLevel.PRIVATE)
     @ToString
     @EqualsAndHashCode
-    public static class Company {
+    public static class Worker {
 
         private String name;
 
     }
 
-    private List<Company> companies;
+    private List<Worker> workers;
 
-    public static Function<Collection<Project.Worker.Entity.Company>, GetCompaniesResponse> entityToDtoMapper() {
-        return companies -> {
-            GetCompaniesResponseBuilder response = GetCompaniesResponse.builder();
-            List<Company> cmps;
-            cmps = companies.stream()
-                    .map(company -> Company.builder()
-                            .name(company.getName())
+    public static Function<Collection<Project.Worker.Entity.Worker>, GetWorkersResponse> entityToDtoMapper() {
+        return Workers -> {
+            GetWorkersResponseBuilder response = GetWorkersResponse.builder();
+            List<Worker> wrks;
+            wrks = Workers.stream()
+                    .map(worker -> Worker.builder()
+                            .name(worker.getName())
                             .build())
                     .toList();
-            response.companies(cmps);
+            response.workers(wrks);
             return response.build();
         };
     }

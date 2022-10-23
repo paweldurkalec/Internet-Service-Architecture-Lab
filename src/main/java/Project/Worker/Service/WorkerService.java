@@ -28,7 +28,11 @@ public class WorkerService {
     @Transactional
     public void create(Worker w){repository.save(w);}
 
+    public void update(Worker w){repository.save(w);}
+
     @Transactional
     public void delete(Worker w){repository.delete(w);}
+
+    public void deleteAll(){repository.deleteAll();}
 
 }

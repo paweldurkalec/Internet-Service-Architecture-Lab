@@ -29,6 +29,11 @@ public class CompanyService {
     public void create(Company c){repository.save(c);}
 
     @Transactional
+    public void update(Company c){repository.save(c);}
+
+    @Transactional
     public void delete(Company c){repository.delete(c);}
+
+    public void deleteAll(){repository.deleteAll();}
 
 }

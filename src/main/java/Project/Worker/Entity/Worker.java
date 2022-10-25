@@ -20,6 +20,6 @@ public class Worker {
     public int age;
 
     @ManyToOne
-    @JoinColumn(name="worker")
+    @JoinColumn(name="company")
     public Company company;
 }

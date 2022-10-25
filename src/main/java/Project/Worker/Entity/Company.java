@@ -2,10 +2,8 @@ package Project.Worker.Entity;
 
 import lombok.*;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.List;
 
 @Builder
 @Getter
@@ -26,4 +24,7 @@ public class Company {
 
     @Column(name="company_type")
     public String type;
+
+    @OneToMany(mappedBy="company", cascade= CascadeType.ALL, fetch=FetchType.EAGER)
+    List<Worker> workerList;
 }

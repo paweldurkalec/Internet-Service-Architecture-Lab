@@ -1,6 +1,5 @@
 package Project.Worker.Repository;
 
-import Project.Repository.Repository;
 import Project.Worker.Entity.Worker;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.JpaRepository;

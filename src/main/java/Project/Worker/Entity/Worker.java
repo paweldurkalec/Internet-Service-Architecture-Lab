@@ -1,5 +1,6 @@
 package Project.Worker.Entity;
 
+import Project.Company.Entity.Company;
 import lombok.*;
 
 import javax.persistence.*;

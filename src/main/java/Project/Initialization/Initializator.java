@@ -1,8 +1,8 @@
 package Project.Initialization;
 
-import Project.Worker.Entity.Company;
+import Project.Company.Entity.Company;
 import Project.Worker.Entity.Worker;
-import Project.Worker.Service.CompanyService;
+import Project.Company.Service.CompanyService;
 import Project.Worker.Service.WorkerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -24,14 +24,10 @@ public class Initializator {
     private void init() {
         Company c1 = Company.builder()
                 .name("Ontel")
-                .value(1000)
-                .type("IT")
                 .build();
 
         Company c2 = Company.builder()
                 .name("Frog")
-                .value(100)
-                .type("FoodTrading")
                 .build();
 
         Worker w1 = Worker.builder()

@@ -1,11 +1,10 @@
-package Project.Worker.Entity;
+package Project.Company.Entity;
 
+import Project.Worker.Entity.Worker;
 import lombok.*;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.List;
 
 @Builder
 @Getter
@@ -26,4 +25,8 @@ public class Company {
 
     @Column(name="company_type")
     public String type;
+
+    @OneToMany(cascade = CascadeType.REMOVE, mappedBy = "company")
+    @ToString.Exclude
+    List<Worker> workerList;
 }

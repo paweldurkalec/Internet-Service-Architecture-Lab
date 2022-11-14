@@ -1,6 +1,5 @@
 package Project.Worker.DTO;
 
-import Project.Worker.Entity.Company;
 import Project.Worker.Entity.Worker;
 import lombok.*;
 

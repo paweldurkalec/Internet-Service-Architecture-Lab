@@ -1,4 +1,4 @@
-package Project.Worker.Entity;
+package Project.Company.Entity;
 
 import lombok.*;
 

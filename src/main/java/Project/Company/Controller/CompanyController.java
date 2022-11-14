@@ -1,13 +1,12 @@
-package Project.Worker.Controller;
+package Project.Company.Controller;
 
 //import Project.Worker.DTO.GetCompaniesResponse;
-import Project.Worker.DTO.CreateCompanyRequest;
-import Project.Worker.DTO.GetCompaniesResponse;
-import Project.Worker.DTO.GetCompanyResponse;
-import Project.Worker.DTO.UpdateCompanyRequest;
-import Project.Worker.Entity.Company;
-import Project.Worker.Entity.Worker;
-import Project.Worker.Service.CompanyService;
+import Project.Company.DTO.CreateCompanyRequest;
+import Project.Company.DTO.GetCompaniesResponse;
+import Project.Company.DTO.GetCompanyResponse;
+import Project.Company.DTO.UpdateCompanyRequest;
+import Project.Company.Entity.Company;
+import Project.Company.Service.CompanyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

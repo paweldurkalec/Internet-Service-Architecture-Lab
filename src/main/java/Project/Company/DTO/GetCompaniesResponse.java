@@ -1,4 +1,4 @@
-package Project.Worker.DTO;
+package Project.Company.DTO;
 
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
@@ -7,7 +7,6 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import lombok.Singular;
 import lombok.ToString;
 
 import java.util.Collection;
@@ -38,7 +37,7 @@ public class GetCompaniesResponse {
 
     private List<Company> companies;
 
-    public static Function<Collection<Project.Worker.Entity.Company>, GetCompaniesResponse> entityToDtoMapper() {
+    public static Function<Collection<Project.Company.Entity.Company>, GetCompaniesResponse> entityToDtoMapper() {
         return companies -> {
             GetCompaniesResponseBuilder response = GetCompaniesResponse.builder();
             List<Company> cmps;

@@ -1,10 +1,9 @@
-package Project.Worker.DTO;
+package Project.Company.DTO;
 
-import Project.Worker.Entity.Company;
+import Project.Company.Entity.Company;
 import lombok.*;
 
 import java.util.function.BiFunction;
-import java.util.function.Function;
 
 @Getter
 @Setter

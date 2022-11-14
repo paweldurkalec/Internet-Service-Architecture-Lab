@@ -1,12 +1,12 @@
-GET http://localhost:8082/api/companies
+GET http://localhost:8080/api/companies
 
 ###
 
-GET http://localhost:8082/api/companies/Ontel
+GET http://localhost:8080/api/companies/Ontel
 
 ###
 
-POST http://localhost:8082/api/companies
+POST http://localhost:8080/api/companies
 Content-Type: application/json
 
 {
@@ -17,11 +17,11 @@ Content-Type: application/json
 
 ###
 
-GET http://localhost:8082/api/companies/Liddel
+GET http://localhost:8080/api/companies/Liddel
 
 ###
 
-PUT http://localhost:8082/api/companies/Liddel
+PUT http://localhost:8080/api/companies/Liddel
 Content-Type: application/json
 
 {
@@ -31,34 +31,34 @@ Content-Type: application/json
 
 ###
 
-GET http://localhost:8082/api/companies/Liddel
+GET http://localhost:8080/api/companies/Liddel
 
 ###
 
-GET http://localhost:8082/api/workers
+GET http://localhost:8080/api/workers
 
 ###
 
-GET http://localhost:8082/api/workers/Jan
+GET http://localhost:8080/api/workers/Jan
 
 ###
 
-POST http://localhost:8082/api/workers
+POST http://localhost:8080/api/workers
 Content-Type: application/json
 
 {
   "name": "Marcin",
   "age": 10,
-  "company": "Ontel"
+  "company": "Liddel"
 }
 
 ###
 
-GET http://localhost:8082/api/workers/Marcin
+GET http://localhost:8080/api/workers/Marcin
 
 ###
 
-PUT http://localhost:8082/api/workers/Marcin
+PUT http://localhost:8080/api/workers/Marcin
 Content-Type: application/json
 
 {
@@ -67,20 +67,20 @@ Content-Type: application/json
 
 ###
 
-GET http://localhost:8082/api/workers/Marcin
+GET http://localhost:8080/api/workers/Marcin
 
 ###
 
-DELETE  http://localhost:8082/api/workers/Jan
+DELETE  http://localhost:8080/api/workers/Jan
 
 ###
 
-DELETE http://localhost:8082/api/workers
+DELETE http://localhost:8080/api/workers
 
 ###
 
-DELETE http://localhost:8082/api/companies/Frog
+DELETE http://localhost:8080/api/companies/Frog
 
 ###
 
-DELETE http://localhost:8082/api/companies
+DELETE http://localhost:8080/api/companies

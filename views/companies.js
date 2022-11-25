@@ -5,9 +5,6 @@ window.addEventListener('load', () => {
     fetchAndDisplayCompanies();
 });
 
-/**
- * Fetches all Companies and modifies the DOM tree in order to display them.
- */
 function fetchAndDisplayCompanies() {
     const xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
@@ -19,11 +16,6 @@ function fetchAndDisplayCompanies() {
     xhttp.send();
 }
 
-/**
- * Updates the DOM tree in order to display Companies.
- *
- * @param {{Companies: string[]}} Companies
- */
 function displayCompanies(Companies) {
     let tableBody = document.getElementById('tableBody');
     clearElementChildren(tableBody);
@@ -32,26 +24,15 @@ function displayCompanies(Companies) {
     })
 }
 
-/**
- * Creates single table row for entity.
- *
- * @param {string} Company
- * @returns {HTMLTableRowElement}
- */
 function createTableRow(company) {
     let tr = document.createElement('tr');
     tr.appendChild(createTextCell(company));
-    tr.appendChild(createLinkCell('Details', 'update_company.html?company=' + company));
+    tr.appendChild(createLinkCell('Details', 'company_view.html?company=' + company));
 	tr.appendChild(createLinkCell('Edit', 'update_company.html?company=' + company));
     tr.appendChild(createButtonCell('Delete', () => deleteCompany(company)));
     return tr;
 }
 
-/**
- * Deletes entity from backend and reloads table.
- *
- * @param {string } Company to be deleted
- */
 function deleteCompany(Company) {
     const xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {

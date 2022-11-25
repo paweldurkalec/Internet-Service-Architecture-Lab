@@ -1,5 +1,5 @@
 body {
-    background-color: #96C4D8;
+    background-color: #dcdcdc;
     font-family: Georgia serif;
 }
 
@@ -10,7 +10,7 @@ body {
 
 .header {
     text-align: right;
-    background: #548BA1;
+    background: #C0C0C0;
     color: #214753;
     font-weight: bold;
 }
@@ -22,7 +22,7 @@ body {
 }
 
 .navigation-bar {
-    background-color: #548BA1;
+    background-color: #C0C0C0;
 }
 
 .navigation-bar ul {
@@ -116,7 +116,7 @@ body {
 
 .data-table thead {
     font-weight: bold;
-    background-color: #548BA1;
+    background-color: #C0C0C0;
     color: #214753;
 }
 

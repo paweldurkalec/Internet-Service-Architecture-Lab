@@ -2,10 +2,11 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8"/>
-        <title>Simple RPG</title>
+        <title>Labolatory Application</title>
         <link rel="stylesheet" href="../styles.css"/>
         <script src="../script.js" defer="defer"></script>
-        <script type="module" src="companies.js" defer="defer"></script>
+		<script src="add_worker.js"></script>
+        <script type="module" src="company_view.js" defer="defer"></script>
     </head>
     <body>
         <div class="container">
@@ -25,26 +26,32 @@
                     <table class="data-table">
                         <thead>
                             <tr>
-                                <th>name</th>
-                                <th>details</th>
-								<th>edit</th>
-                                <th>delete</th>
+                                <th>Name</th>
+                                <th>Type</th>
+								<th>Value</th>
                             </tr>
                         </thead>
-                        <tbody id="tableBody">
+                        <tbody>
                             <tr>
-                                <td>name</td>
-                                <td><a href="#">details</a></td>
-								<td><a href="#">edit</a></td>
-                                <td>
-                                    <button class="ui-button ui-control">delete</button>
-                                </td>
+                                <td id="company_name">Name</td>
+								<td id="type">Type</td>
+                                <td id="val">Value</td>
                             </tr>
                         </tbody>
                     </table>
-					<form action="add_company.html">
-						<input type="submit" value="Create new company" />
-					</form>		
+					 <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+								<th>Details</th>
+								<th>Edit</th>
+								<th>Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableBody">
+                        </tbody>
+                    </table>
+					<button value="Add worker" onclick="show_add_worker_view()">Add worker</button>	
                 </article>
             </section>
         </div>

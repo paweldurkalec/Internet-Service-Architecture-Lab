@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Labolatory Application</title>
+        <link rel="stylesheet" href="../styles.css"/>
+        <script src="../script.js" defer="defer"></script>
+        <script src="add_worker.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <header class="header">
+                <h1>Labolatory Application</h1>
+            </header>
+
+            <nav class="navigation-bar">
+                <ul>
+                    <li><a href="../index.html">main</a></li>
+                </ul>
+            </nav>
+
+            <section class="main-section">
+                <article class="text--justified">
+
+					<form>
+					  <div>
+						<label>Name:</label>
+						<input id="name" name="name" type="text">
+					  </div>
+					  <div>
+						<label>Age:</label>
+						<input id="age" name="age" type="text">
+					  </div>
+					  <div>
+						<input id="submit" type="submit" onclick="add_worker()">
+					  </div>
+					</form>	
+                </article>
+            </section>
+        </div>
+    </body>
+</html>

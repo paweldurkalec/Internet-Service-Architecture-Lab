@@ -11,5 +11,5 @@ function update_company(){
 		xhttp.setRequestHeader("Content-type", "application/json");
 		console.log(JSON.stringify(company));
 		xhttp.send(JSON.stringify(company));
-		window.location.href = 'http://localhost:100/companies/update_company.html?company=' + company_name;
+		window.location.href = 'http://localhost:100/views/update_company.html?company=' + company_name;
 }

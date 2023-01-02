@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Labolatory Application</title>
+        <link rel="stylesheet" href="../styles.css"/>
+        <script src="../script.js" defer="defer"></script>
+        <script type="module" src="load_company.js" defer="defer"></script>
+		<script src="update_company.js" ></script>
+    </head>
+    <body>
+        <div class="container">
+            <header class="header">
+                <h1>Labolatory Application</h1>
+            </header>
+
+            <nav class="navigation-bar">
+                <ul>
+                    <li><a href="../index.html">main</a></li>
+                </ul>
+            </nav>
+
+            <section class="main-section">
+                <article class="text--justified">
+
+					<form>
+					  <div>
+						<text id="company_name">Company name</text>
+					  </div>
+					  <div>
+						<label>Type:</label>
+						<input id="type" name="type" type="text">
+					  </div>
+					  <div>
+						<label>Value:</label>
+						<input id="val" name="val" type="text">
+					  </div>
+					  <div>
+						<input id="submit" type="button" value="submit" onclick="update_company()">
+					  </div>
+					</form>	
+                </article>
+            </section>
+        </div>
+    </body>
+</html>

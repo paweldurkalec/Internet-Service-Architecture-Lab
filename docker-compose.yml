@@ -1,0 +1,10 @@
+services:
+    main:
+        build: ./main/
+    spring:
+        build: ./spring/
+    proxy:
+        build: ./proxy
+        ports:
+            - "8000:80"
+            - "8001:81"
